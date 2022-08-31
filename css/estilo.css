@@ -1,0 +1,65 @@
+*{margin: 0;padding: 0;}
+
+.links{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    background-color: #213571;
+    color: white;
+}
+
+.links label{
+    padding: 10px 0;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 100%;
+    transition: all .4s;
+}
+.links label:hover{
+    background-color: rgba(0, 0, 0, .2);
+}
+
+
+
+.scroll{
+    display:flex;
+    width: 100vw; height: 100vw;
+    overflow: hidden;
+}
+input{display: none;}
+
+.leimages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; height: 100vh;
+}
+.leimages img{ 
+    height: 100%;
+    width: 100%;
+
+}
+
+#escola{ 
+    background-color: white
+}
+#professor{ background-color:gray;}
+#evento{ background-color:red;}
+#contato{background-color:maroon;}
+
+#rd_escola:checked ~ .sections{
+    margin-top: 0;    
+}
+#rd_professores:checked ~ .sections{
+    margin-top: -100vh;
+}
+#rd_evento:checked ~ .sections{
+    margin-top: -200vh;
+}
+#rd_contato:checked ~ .sections{
+    margin-top: -300vh; 
+}
+
+.sections{ transition: all .4s;}
